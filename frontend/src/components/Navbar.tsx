@@ -71,12 +71,13 @@ function Navbar() {
           <li>
             <Link to="/calculator">Calculator</Link>
           </li>
+          <li>
+            <Link to="/compare">Compare</Link>
+          </li>
         </ul>
       </div>
+
       <div className="navbar-end">
-        <a className="btn">Button</a>
-      </div>
-      <div className="self-end">
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
           <input className="" type="checkbox" onClick={handleThemeSwitch} />
