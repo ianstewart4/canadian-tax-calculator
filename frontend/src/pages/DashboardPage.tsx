@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 
-export const Dashboard = () => {
+export const DashboardPage = () => {
   const [count, setCount] = useState(0);
   return (
     <>
