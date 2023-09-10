@@ -1,24 +1,44 @@
-export default function ProvinceDropdown() {
+export default function ProvinceDropdown({ onChangeProvinceSelect }) {
+  const options: {
+    province: string;
+    value: string;
+  }[] = [
+    { province: "Alberta", value: "alberta" },
+    { province: "British Columbia", value: "british-columbia" },
+    { province: "Manitoba", value: "manitoba" },
+    { province: "New Brunswick", value: "new-brunswick" },
+    {
+      province: "Newfoundland and Labrador",
+      value: "newfoundland-and-labrador",
+    },
+    { province: "Nova Scotia", value: "nova-scotia" },
+    { province: "Ontario", value: "ontario" },
+    { province: "Prince Edward Island", value: "prince-edward-island" },
+    { province: "Quebec", value: "quebec" },
+    { province: "Saskatchewan", value: "saskatchewan" },
+    { province: "Northwest Territories", value: "northwest-territories" },
+    { province: "Nunavut", value: "nunavut" },
+    { province: "Yukon", value: "yukon" },
+  ];
+
   return (
     <div>
-      <div className="join">
-        <select className="select select-bordered join-item">
-          <option disabled selected>
+      <div className="join flex">
+        <select
+          className="select select-bordered join-item"
+          onChange={onChangeProvinceSelect}
+          defaultValue={"province"}
+        >
+          <option value={"province"} disabled>
             Province
           </option>
-          <option>Alberta</option>
-          <option>British Columbia</option>
-          <option>Manitoba</option>
-          <option>New Brunswick</option>
-          <option>Newfoundland and Labrador</option>
-          <option>Nova Scotia</option>
-          <option>Ontario</option>
-          <option>Prince Edward Island</option>
-          <option>Quebec</option>
-          <option>Saskatchewan</option>
-          <option>Northwest Territories</option>
-          <option>Nunavut</option>
-          <option>Yukon</option>
+          {options.map((option) => {
+            return (
+              <option value={option.province} key={option.value}>
+                {option.province}
+              </option>
+            );
+          })}
         </select>
       </div>
     </div>
