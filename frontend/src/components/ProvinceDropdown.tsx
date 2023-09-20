@@ -1,4 +1,9 @@
-export default function ProvinceDropdown({ onChangeProvinceSelect }) {
+interface ProvinceDropdownProps {
+  onChangeProvinceSelect: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+}
+const ProvinceDropdown: React.FC<ProvinceDropdownProps> = ({
+  onChangeProvinceSelect,
+}) => {
   const options: {
     province: string;
     value: string;
@@ -43,4 +48,6 @@ export default function ProvinceDropdown({ onChangeProvinceSelect }) {
       </div>
     </div>
   );
-}
+};
+
+export default ProvinceDropdown;

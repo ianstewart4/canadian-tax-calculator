@@ -3,10 +3,10 @@ import ProvinceDropdown from "../components/ProvinceDropdown";
 import { useState } from "react";
 
 export const CompareProvincesPage = () => {
-  const [province, setProvince] = useState("");
+  const [province, setProvince] = useState<string>("");
 
-  const onChangeProvinceSelect = (e: FormEvent) => {
-    setProvince((e.target as HTMLOptionElement).value);
+  const onChangeProvinceSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setProvince(e.target.value);
   };
 
   return (
