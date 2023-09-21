@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import DataCard from "../components/DataCard";
 import InputCard from "../components/InputCard";
 import Navbar from "../components/Navbar";
@@ -7,8 +7,8 @@ import ProvinceDropdown from "../components/ProvinceDropdown";
 export const CalculatorPage = () => {
   const [province, setProvince] = useState("");
 
-  const onChangeProvinceSelect = (e: FormEvent) => {
-    setProvince((e.target as HTMLOptionElement).value);
+  const onChangeProvinceSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setProvince(e.target.value);
   };
 
   return (
