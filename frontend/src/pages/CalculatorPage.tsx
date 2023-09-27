@@ -16,7 +16,10 @@ export const CalculatorPage = () => {
       <Navbar />
       <div className="flex justify-center mt-10">
         <div>
-          <ProvinceDropdown onChangeProvinceSelect={onChangeProvinceSelect} />
+          <h1 className="text-7xl">2023 Canada Income Tax Calculator</h1>
+          <div className="flex justify-center mt-10">
+            <ProvinceDropdown onChangeProvinceSelect={onChangeProvinceSelect} />
+          </div>
           <h1 className="flex justify-center mt-10">{province}</h1>
           <div className="flex justify-center mt-10">
             <InputCard />
